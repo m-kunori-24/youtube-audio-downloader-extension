@@ -1,0 +1,8 @@
+node_modules/
+*.pem
+*.crx
+extension/dist/
+/*.zip
+e2e-check/
+e2e-profile/
+

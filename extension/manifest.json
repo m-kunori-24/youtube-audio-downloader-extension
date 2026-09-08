@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwRAeOQ4Wwqsw+vWUEPlvU9OOc705QfcjPP6ulzj58DnQxhUnYjT7CqrjKS/ThHr0O27pj6kg0pRrA5AQ9WJv/9IK3R2Sfj0+zN2LMJ33ylxfbtb0g+OOyG3+ccqgwUwWDykC/YrCyUDTD6hWB7NUd0yx0wIi/LLo9N2upohOn6vKPQSVh6/nXj6qB9IG50VMZ+biokZHomx77iW0dXoJhFAi3OB8ZeaJz7hn4URuQZNZHRCS/4xAK/VaUuWFps5+ZRqqsZ4Ho9+13LImNHl4rtZPaob/HOkgsHMkoSfwK6n82aSXulddZil0JF9VzoxhX+Var7+B9mcKbSfWLFMOpQIDAQAB",
+  "default_locale": "en",
+  "name": "__MSG_appName__",
+  "version": "1.0.0",
+  "description": "__MSG_appDescription__",
+  "permissions": ["storage", "notifications", "scripting", "offscreen", "tabs", "downloads"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  }
+}

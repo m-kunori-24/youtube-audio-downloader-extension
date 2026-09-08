@@ -1,0 +1,223 @@
+{
+  "appName": {
+    "message": "YouTube Audio Downloader"
+  },
+  "appDescription": {
+    "message": "Download audio from YouTube videos. Requires Chrome to be signed in to your YouTube account."
+  },
+  "popupTitle": {
+    "message": "YouTube Audio Download"
+  },
+  "labelUrl": {
+    "message": "Target URL"
+  },
+  "labelFormat": {
+    "message": "Audio Format"
+  },
+  "labelQuality": {
+    "message": "Audio Quality"
+  },
+  "qualityStandard": {
+    "message": "Standard"
+  },
+  "qualityHigh": {
+    "message": "High"
+  },
+  "qualityBest": {
+    "message": "Best"
+  },
+  "labelOutputDir": {
+    "message": "Output Directory"
+  },
+  "placeholderOutputDir": {
+    "message": "Downloads folder"
+  },
+  "buttonBrowse": {
+    "message": "Browse..."
+  },
+  "buttonClearOutputDir": {
+    "message": "Clear"
+  },
+  "buttonStart": {
+    "message": "Start Download"
+  },
+  "titleUrlInput": {
+    "message": "The URL of the YouTube video you want to download."
+  },
+  "titleFormatSelect": {
+    "message": "Select the audio format to save."
+  },
+  "titleQualitySelect": {
+    "message": "Select the audio quality. Quality selection has no effect for the wav/flac formats."
+  },
+  "titleBrowseButton": {
+    "message": "Select the output folder."
+  },
+  "titleClearOutputDirButton": {
+    "message": "Clear the selected output folder and save to the Downloads folder instead."
+  },
+  "titleBrowseButtonUnsupported": {
+    "message": "This browser does not support folder selection."
+  },
+  "noticeDirectoryPickerUnsupported": {
+    "message": "This browser does not support folder selection, so files will be saved to the Downloads folder."
+  },
+  "titleOutputDir": {
+    "message": "The selected output folder. If none is selected, the file is saved to the Downloads folder."
+  },
+  "titleStartButton": {
+    "message": "Start the download."
+  },
+  "state_starting": {
+    "message": "Preparing"
+  },
+  "state_downloading": {
+    "message": "Downloading"
+  },
+  "state_converting": {
+    "message": "Converting"
+  },
+  "state_completed": {
+    "message": "Completed"
+  },
+  "state_error": {
+    "message": "Error"
+  },
+  "state_waiting": {
+    "message": "Waiting"
+  },
+  "etaRemaining": {
+    "message": "$SECONDS$ sec remaining",
+    "placeholders": {
+      "seconds": {
+        "content": "$1"
+      }
+    }
+  },
+  "notificationTitleCompleted": {
+    "message": "Audio download completed"
+  },
+  "notificationBodyCompleted": {
+    "message": "The download has completed."
+  },
+  "notificationTitleFailed": {
+    "message": "Audio download failed"
+  },
+  "error_INVALID_URL": {
+    "message": "This is not a YouTube video URL."
+  },
+  "error_INVALID_FORMAT": {
+    "message": "This audio format is not supported."
+  },
+  "error_TASK_ALREADY_RUNNING": {
+    "message": "Another download is already in progress."
+  },
+  "error_INVALID_AUDIO_QUALITY": {
+    "message": "This audio quality is not supported."
+  },
+  "error_AUTH_NOT_LOGGED_IN": {
+    "message": "You are not signed in to YouTube. Please sign in and try again."
+  },
+  "error_AUTH_REJECTED": {
+    "message": "YouTube rejected the authentication. Please sign in again."
+  },
+  "error_VIDEO_LOGIN_REQUIRED": {
+    "message": "This video requires signing in to YouTube to watch."
+  },
+  "error_VIDEO_AGE_RESTRICTED": {
+    "message": "This video is age-restricted and cannot be downloaded."
+  },
+  "error_VIDEO_UNPLAYABLE": {
+    "message": "This video cannot be played."
+  },
+  "error_VIDEO_UNAVAILABLE": {
+    "message": "This video is unavailable."
+  },
+  "error_VIDEO_LIVE": {
+    "message": "Live videos cannot be downloaded."
+  },
+  "error_VIDEO_DRM": {
+    "message": "This video is protected by DRM and cannot be downloaded."
+  },
+  "error_VIDEO_NO_AUDIO_FORMAT": {
+    "message": "No audio format is available for this video."
+  },
+  "error_PLAYER_JS_UNAVAILABLE": {
+    "message": "Could not load the YouTube player script. This extension may need to be updated."
+  },
+  "error_EXTRACT_NSIG_FAILED": {
+    "message": "Could not decode the video's signature. This extension may need to be updated."
+  },
+  "error_NSIG_REJECTED_BY_SERVER": {
+    "message": "YouTube rejected the decoded signature. This extension may need to be updated."
+  },
+  "error_STREAM_URL_EXPIRED": {
+    "message": "The audio stream URL has expired. Please try again."
+  },
+  "error_SABR_SERVER_ERROR": {
+    "message": "YouTube's streaming server returned an error. Please try again."
+  },
+  "error_SABR_NETWORK_UNREACHABLE": {
+    "message": "Could not reach YouTube's streaming server. Please check your network connection."
+  },
+  "error_FETCH_STALLED": {
+    "message": "The download stalled. Please try again."
+  },
+  "error_FETCH_TIMEOUT": {
+    "message": "The download timed out. Please try again."
+  },
+  "error_PLAYER_REQUEST_FAILED": {
+    "message": "Could not request video information from YouTube. Please try again."
+  },
+  "error_TAB_UNAVAILABLE": {
+    "message": "The YouTube tab is no longer available. Please reopen the video and try again."
+  },
+  "error_TRANSFER_INCOMPLETE": {
+    "message": "The audio data transfer did not complete. Please try again."
+  },
+  "error_TRANSFER_SEQ_GAP": {
+    "message": "The audio data transfer was interrupted. Please try again."
+  },
+  "error_TRANSFER_OFFSET_MISMATCH": {
+    "message": "The audio data transfer became inconsistent. Please try again."
+  },
+  "error_TRANSFER_SIZE_MISMATCH": {
+    "message": "The audio data transfer became inconsistent. Please try again."
+  },
+  "error_TRANSFER_WRITE_FAILED": {
+    "message": "Could not write the audio data. Please try again."
+  },
+  "error_CONVERT_UNSUPPORTED": {
+    "message": "This audio format is not supported for conversion."
+  },
+  "error_CONVERT_FAILED": {
+    "message": "Audio conversion failed. Please try again."
+  },
+  "error_CONVERT_STALLED": {
+    "message": "The conversion stalled. Please try again."
+  },
+  "error_SAVE_PERMISSION_DENIED": {
+    "message": "Permission to save to the selected folder was denied."
+  },
+  "error_SAVE_NO_DIRECTORY": {
+    "message": "No save folder is available."
+  },
+  "error_SAVE_FAILED": {
+    "message": "Could not save the file."
+  },
+  "error_SW_RESTARTED": {
+    "message": "The process was interrupted. Please try again."
+  },
+  "error_OFFSCREEN_UNAVAILABLE": {
+    "message": "Could not prepare the background processing needed for conversion. Please try again."
+  },
+  "error_INJECTION_FAILED": {
+    "message": "Could not start retrieving audio from the page. Please try again."
+  },
+  "error_RELAY_PORT_DISCONNECTED": {
+    "message": "The audio transfer channel with the page was disconnected. Please try again."
+  },
+  "error_RELAY_IDLE": {
+    "message": "No response was received from the page for a long time. Please try again."
+  }
+}

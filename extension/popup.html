@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title data-i18n="popupTitle">YouTube Audio Download</title>
+<style>
+  :root {
+    --color-text: #1f2328;
+    --color-muted: #6b7280;
+    --color-border: #d0d5dd;
+    --color-bg: #ffffff;
+    --color-surface: #f6f7f9;
+    --color-accent: #2563eb;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    width: 320px;
+    font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-text);
+    background: var(--color-bg);
+    margin: 0;
+    padding: 12px;
+  }
+  label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-muted);
+    margin-bottom: 4px;
+  }
+  #url-row,
+  #format-row,
+  #quality-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  #url-input,
+  #format-select,
+  #quality-select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 13px;
+  }
+  #url-input:focus,
+  #format-select:focus,
+  #quality-select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+  #url-input:disabled,
+  #format-select:disabled,
+  #quality-select:disabled,
+  #start-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  #start-button {
+    width: 100%;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 6px;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #start-button:hover:not(:disabled) {
+    background: #1d4ed8;
+  }
+  #progress-area {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    background: var(--color-surface);
+  }
+  #state-text {
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+  progress#progress-bar {
+    width: 100%;
+    height: 6px;
+    accent-color: var(--color-accent);
+  }
+  #detail-text {
+    margin: 6px 0 0;
+    color: var(--color-muted);
+    font-size: 12px;
+  }
+  #result-area {
+    margin-top: 8px;
+  }
+  #result-text {
+    margin: 0;
+    font-size: 12px;
+    word-break: break-all;
+  }
+  #output-dir-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  #output-dir-controls {
+    display: flex;
+    gap: 6px;
+  }
+  #output-dir-display {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 13px;
+  }
+  #browse-button,
+  #clear-output-dir-button {
+    padding: 6px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  #browse-button:hover:not(:disabled),
+  #clear-output-dir-button:hover:not(:disabled) {
+    background: var(--color-surface);
+  }
+  #output-dir-display:disabled,
+  #browse-button:disabled,
+  #clear-output-dir-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  #picker-unsupported-notice {
+    margin: 6px 0 0;
+    color: var(--color-muted);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <div id="url-row">
+    <label for="url-input" data-i18n="labelUrl">Target URL</label>
+    <input id="url-input" type="text" data-i18n-title="titleUrlInput" />
+  </div>
+  <div id="format-row">
+    <label for="format-select" data-i18n="labelFormat">Audio Format</label>
+    <select id="format-select" data-i18n-title="titleFormatSelect">
+      <option value="mp3" selected>mp3</option>
+      <option value="aac">aac</option>
+      <option value="m4a">m4a</option>
+      <option value="opus">opus</option>
+      <option value="vorbis">vorbis</option>
+      <option value="wav">wav</option>
+      <option value="flac">flac</option>
+    </select>
+  </div>
+  <div id="quality-row">
+    <label for="quality-select" data-i18n="labelQuality">Audio Quality</label>
+    <select id="quality-select" data-i18n-title="titleQualitySelect">
+      <option value="standard" selected data-i18n="qualityStandard">Standard</option>
+      <option value="high" data-i18n="qualityHigh">High</option>
+      <option value="best" data-i18n="qualityBest">Best</option>
+    </select>
+  </div>
+  <div id="output-dir-row">
+    <label for="output-dir-display" data-i18n="labelOutputDir">Output Directory</label>
+    <div id="output-dir-controls">
+      <input
+        id="output-dir-display"
+        type="text"
+        readonly
+        placeholder="Downloads folder"
+        data-i18n-placeholder="placeholderOutputDir"
+        data-i18n-title="titleOutputDir"
+      />
+      <button
+        id="browse-button"
+        type="button"
+        data-i18n="buttonBrowse"
+        data-i18n-title="titleBrowseButton"
+      >
+        Browse...
+      </button>
+      <button
+        id="clear-output-dir-button"
+        type="button"
+        data-i18n="buttonClearOutputDir"
+        data-i18n-title="titleClearOutputDirButton"
+      >
+        Clear
+      </button>
+    </div>
+    <p id="picker-unsupported-notice" data-i18n="noticeDirectoryPickerUnsupported" hidden></p>
+  </div>
+  <button id="start-button" data-i18n="buttonStart" data-i18n-title="titleStartButton">
+    Start Download
+  </button>
+  <section id="progress-area" hidden>
+    <p id="state-text" data-i18n="state_waiting">Waiting</p>
+    <progress id="progress-bar" value="0" max="100"></progress>
+    <p id="detail-text"></p>
+  </section>
+  <section id="result-area" hidden>
+    <p id="result-text"></p>
+  </section>
+  <script src="popup.js"></script>
+</body>
+</html>

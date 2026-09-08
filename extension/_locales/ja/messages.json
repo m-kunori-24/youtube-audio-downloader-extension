@@ -1,0 +1,223 @@
+{
+  "appName": {
+    "message": "YouTube Audio Downloader"
+  },
+  "appDescription": {
+    "message": "YouTube動画から音声をダウンロードします。Chromeがあなたのログイン済みYouTubeアカウントで使用される必要があります。"
+  },
+  "popupTitle": {
+    "message": "YouTube 音声ダウンロード"
+  },
+  "labelUrl": {
+    "message": "対象URL"
+  },
+  "labelFormat": {
+    "message": "音声形式"
+  },
+  "labelQuality": {
+    "message": "音質"
+  },
+  "qualityStandard": {
+    "message": "標準"
+  },
+  "qualityHigh": {
+    "message": "高音質"
+  },
+  "qualityBest": {
+    "message": "最高音質"
+  },
+  "labelOutputDir": {
+    "message": "保存先"
+  },
+  "placeholderOutputDir": {
+    "message": "Downloadsフォルダ"
+  },
+  "buttonBrowse": {
+    "message": "参照..."
+  },
+  "buttonClearOutputDir": {
+    "message": "クリア"
+  },
+  "buttonStart": {
+    "message": "ダウンロード開始"
+  },
+  "titleUrlInput": {
+    "message": "ダウンロードしたいYouTube動画のURL"
+  },
+  "titleFormatSelect": {
+    "message": "保存する音声の形式を選択します"
+  },
+  "titleQualitySelect": {
+    "message": "音質を選択します。wav・flac形式では音質指定は無効になります"
+  },
+  "titleBrowseButton": {
+    "message": "保存先フォルダを選択します"
+  },
+  "titleClearOutputDirButton": {
+    "message": "選択済みの保存先をクリアし、Downloadsフォルダへの保存に戻します"
+  },
+  "titleBrowseButtonUnsupported": {
+    "message": "このブラウザはフォルダ選択に対応していません"
+  },
+  "noticeDirectoryPickerUnsupported": {
+    "message": "このブラウザはフォルダ選択に対応していないため、Downloadsフォルダへ保存されます。"
+  },
+  "titleOutputDir": {
+    "message": "選択済みの保存先です。未選択の場合はDownloadsフォルダに保存されます"
+  },
+  "titleStartButton": {
+    "message": "ダウンロードを開始します"
+  },
+  "state_starting": {
+    "message": "準備中"
+  },
+  "state_downloading": {
+    "message": "ダウンロード中"
+  },
+  "state_converting": {
+    "message": "変換中"
+  },
+  "state_completed": {
+    "message": "完了"
+  },
+  "state_error": {
+    "message": "エラー"
+  },
+  "state_waiting": {
+    "message": "待機中"
+  },
+  "etaRemaining": {
+    "message": "残り $SECONDS$ 秒",
+    "placeholders": {
+      "seconds": {
+        "content": "$1"
+      }
+    }
+  },
+  "notificationTitleCompleted": {
+    "message": "音声ダウンロード完了"
+  },
+  "notificationBodyCompleted": {
+    "message": "ダウンロードが完了しました。"
+  },
+  "notificationTitleFailed": {
+    "message": "音声ダウンロード失敗"
+  },
+  "error_INVALID_URL": {
+    "message": "YouTubeの動画URLではありません。"
+  },
+  "error_INVALID_FORMAT": {
+    "message": "対応していない音声形式です。"
+  },
+  "error_TASK_ALREADY_RUNNING": {
+    "message": "別のダウンロードが実行中です。"
+  },
+  "error_INVALID_AUDIO_QUALITY": {
+    "message": "対応していない音質です。"
+  },
+  "error_AUTH_NOT_LOGGED_IN": {
+    "message": "YouTubeにログインしていません。ログインしてから再度お試しください。"
+  },
+  "error_AUTH_REJECTED": {
+    "message": "YouTubeが認証を拒否しました。再度ログインしてください。"
+  },
+  "error_VIDEO_LOGIN_REQUIRED": {
+    "message": "この動画の視聴にはYouTubeへのログインが必要です。"
+  },
+  "error_VIDEO_AGE_RESTRICTED": {
+    "message": "この動画は年齢制限のためダウンロードできません。"
+  },
+  "error_VIDEO_UNPLAYABLE": {
+    "message": "この動画は再生できません。"
+  },
+  "error_VIDEO_UNAVAILABLE": {
+    "message": "この動画は利用できません。"
+  },
+  "error_VIDEO_LIVE": {
+    "message": "ライブ配信はダウンロードできません。"
+  },
+  "error_VIDEO_DRM": {
+    "message": "この動画はDRM保護されているためダウンロードできません。"
+  },
+  "error_VIDEO_NO_AUDIO_FORMAT": {
+    "message": "この動画には利用可能な音声形式がありません。"
+  },
+  "error_PLAYER_JS_UNAVAILABLE": {
+    "message": "YouTubeプレイヤースクリプトを読み込めませんでした。拡張機能の更新が必要な可能性があります。"
+  },
+  "error_EXTRACT_NSIG_FAILED": {
+    "message": "動画の署名を解読できませんでした。拡張機能の更新が必要な可能性があります。"
+  },
+  "error_NSIG_REJECTED_BY_SERVER": {
+    "message": "解読した署名がYouTubeに拒否されました。拡張機能の更新が必要な可能性があります。"
+  },
+  "error_STREAM_URL_EXPIRED": {
+    "message": "音声ストリームURLの有効期限が切れました。再度お試しください。"
+  },
+  "error_SABR_SERVER_ERROR": {
+    "message": "YouTubeの配信サーバーでエラーが発生しました。再度お試しください。"
+  },
+  "error_SABR_NETWORK_UNREACHABLE": {
+    "message": "YouTubeの配信サーバーに接続できません。ネットワーク接続を確認してください。"
+  },
+  "error_FETCH_STALLED": {
+    "message": "ダウンロードが停止しました。再度お試しください。"
+  },
+  "error_FETCH_TIMEOUT": {
+    "message": "ダウンロードがタイムアウトしました。再度お試しください。"
+  },
+  "error_PLAYER_REQUEST_FAILED": {
+    "message": "YouTubeへの動画情報のリクエストに失敗しました。再度お試しください。"
+  },
+  "error_TAB_UNAVAILABLE": {
+    "message": "YouTubeのタブが利用できません。動画を開き直して再度お試しください。"
+  },
+  "error_TRANSFER_INCOMPLETE": {
+    "message": "音声データの転送が完了しませんでした。再度お試しください。"
+  },
+  "error_TRANSFER_SEQ_GAP": {
+    "message": "音声データの転送が中断されました。再度お試しください。"
+  },
+  "error_TRANSFER_OFFSET_MISMATCH": {
+    "message": "音声データの転送に不整合が発生しました。再度お試しください。"
+  },
+  "error_TRANSFER_SIZE_MISMATCH": {
+    "message": "音声データの転送に不整合が発生しました。再度お試しください。"
+  },
+  "error_TRANSFER_WRITE_FAILED": {
+    "message": "音声データを書き込めませんでした。再度お試しください。"
+  },
+  "error_CONVERT_UNSUPPORTED": {
+    "message": "この音声形式への変換には対応していません。"
+  },
+  "error_CONVERT_FAILED": {
+    "message": "音声の変換に失敗しました。再度お試しください。"
+  },
+  "error_CONVERT_STALLED": {
+    "message": "変換が停止しました。再度お試しください。"
+  },
+  "error_SAVE_PERMISSION_DENIED": {
+    "message": "選択した保存先フォルダへのアクセスが許可されませんでした。"
+  },
+  "error_SAVE_NO_DIRECTORY": {
+    "message": "保存先フォルダが利用できません。"
+  },
+  "error_SAVE_FAILED": {
+    "message": "ファイルを保存できませんでした。"
+  },
+  "error_SW_RESTARTED": {
+    "message": "処理が中断されました。再度お試しください。"
+  },
+  "error_OFFSCREEN_UNAVAILABLE": {
+    "message": "変換に必要なバックグラウンド処理を準備できませんでした。再度お試しください。"
+  },
+  "error_INJECTION_FAILED": {
+    "message": "ページからの音声取得を開始できませんでした。再度お試しください。"
+  },
+  "error_RELAY_PORT_DISCONNECTED": {
+    "message": "ページとの音声転送チャネルが切断されました。再度お試しください。"
+  },
+  "error_RELAY_IDLE": {
+    "message": "ページからの応答が長時間ありませんでした。再度お試しください。"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "youtube-audio-downloader-extension-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "youtube-audio-downloader-extension background.js/popup.jsの単体テスト用設定",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev",
+    "package": "node package.mjs"
+  },
+  "devDependencies": {
+    "@mediabunny/flac-encoder": "^1.55.7",
+    "@mediabunny/mp3-encoder": "^1.55.7",
+    "esbuild": "^0.28.2",
+    "googlevideo": "^4.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "mediabunny": "^1.55.7",
+    "wasm-media-encoders": "^0.7.0",
+    "youtubei.js": "^18.0.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
