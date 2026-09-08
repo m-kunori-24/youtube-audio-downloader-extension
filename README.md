@@ -17,12 +17,13 @@ YouTube動画ダウンロード幇助はポリシー上禁止されているた�
 - YouTubeにログインしていること(拡張機能を使用するブラウザプロファイル内でのログインが必須)
 
 ## インストール
-1. [Releasesページ](https://github.com/m-kunori-24/youtube-audio-downloader-extension/releases/latest)から最新のzipをダウンロードし展開する。
-2. 展開したフォルダ内の `extension` フォルダを確認する。
-3. Chromeで `chrome://extensions` を開く。
-4. 右上の「デベロッパーモード」をONにする。
-5. 「パッケージ化されていない拡張機能を読み込む」をクリックして、展開した `extension` フォルダを選択する。
-6. 読み込み後は、ツールバーの拡張機能アイコンから利用できる。
+1. [Releasesページ](https://github.com/m-kunori-24/youtube-audio-downloader-extension/releases/latest)から最新のzipをダウンロードする。
+2. Chromeで `chrome://extensions` を開く。
+3. 右上の「デベロッパーモード」をONにする。
+4. ダウンロードしたzipを `chrome://extensions` のページにドラッグアンドドロップする。
+5. 読み込み後は、ツールバーの拡張機能アイコンから利用できる。
+
+別の方法: zipを展開し、「パッケージ化されていない拡張機能を読み込む」から展開した `extension` フォルダを選択することでも読み込める。
 
 アンインストールする場合は `chrome://extensions` から手動で削除する。
 
@@ -60,12 +61,13 @@ downloads is against the platform's policies.
 - You must be logged into YouTube in the browser profile the extension runs in.
 
 ## Installation
-1. Download and extract the latest zip from the [Releases page](https://github.com/m-kunori-24/youtube-audio-downloader-extension/releases/latest).
-2. Locate the `extension` folder inside the extracted files.
-3. Open `chrome://extensions` in Chrome.
-4. Turn on "Developer mode" in the top right corner.
-5. Click "Load unpacked" and select the extracted `extension` folder.
-6. Once loaded, the extension is available from its toolbar icon.
+1. Download the latest zip from the [Releases page](https://github.com/m-kunori-24/youtube-audio-downloader-extension/releases/latest).
+2. Open `chrome://extensions` in Chrome.
+3. Turn on "Developer mode" in the top right corner.
+4. Drag the downloaded zip onto the `chrome://extensions` page.
+5. Once loaded, the extension is available from its toolbar icon.
+
+Alternatively, you can extract the zip and click "Load unpacked" to select the extracted `extension` folder.
 
 To uninstall, remove it manually from `chrome://extensions`.
 
